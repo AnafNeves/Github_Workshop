@@ -18,27 +18,211 @@ format:
     highlight-style: "github-dark"
     code-line-numbers: false
     fontsize: "250%"
+    mermaid-format: svg
     # theme: blood
     # title-slide-attributes:
     #   data-background-color: "#1A3F82"
-editor_options: 
+editor_options:
   chunk_output_type: console
-execute:
-  cache: true
-fig-dpi: 300
-params:
-  show_answers: true
 ---
 
-```{r}
-#| include: false
-
-library(tidyverse)
-library(patchwork)
-library(easystats)
-```
+# Introduction {background-color="black"}
 
 ## Things to know
 
+- No prior experience needed
+- Ask questions at any time!
+- Slides are made with [Quarto](https://quarto.org) and hosted on GitHub
 
+## Git vs GitHub
 
+:::: {.columns}
+
+::: {.column width="50%"}
+**Git**
+
+- A software 
+- It is installed locally 
+- Runs on your computer
+- Tracks every change to your files (**version control**)
+
+:::
+
+::: {.column width="50%"}
+**GitHub**
+
+- A service
+- It is hosted on the web and backup in the cloud
+- A *website* that hosts Git repositories
+- Collaboration, sharing, websites
+:::
+
+::::
+
+## An analogy with R {.smaller}
+
+| | The engine | The friendly interface |
+|---|---|---|
+| **Analysing data** | **R** | **RStudio** |
+| **Version control** | **Git** | **GitHub Desktop** |
+
+: {.nonincremental}
+
+- **R** and **Git** do the actual work, and can be used on their own by typing commands
+- **RStudio** and **GitHub Desktop** are apps that make them easier to use, with buttons instead of commands
+- GitHub Desktop comes with Git built in, so you only install one thing
+- **GitHub** (the website) is where your projects are stored online and shared
+
+## Why bother?
+
+- No more `analysis_final_v2_REALLY_final.R`
+- Go back to any previous version
+- Work with others without overwriting each other
+- Share your code & data (open science!)
+- Free websites with GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
+
+# Key concepts {background-color="black"}
+
+## Vocabulary {.smaller}
+
+| Term | Meaning |
+|------|---------|
+| **Repository** (repo) | A project folder tracked by Git |
+| **Commit** | A snapshot of your files at a point in time |
+| **Clone** | Copy a repo from GitHub to your computer |
+| **Push** / **Pull** | Send / receive changes to / from GitHub |
+| **Branch** | A parallel line of work |
+| **Pull request** (PR) | A request to merge changes into another branch |
+
+: {.nonincremental}
+
+## The basic workflow
+
+0. **Pull** any changes from GitHub first, in case someone else made them
+1. **Edit** your files as usual: code, data, text...
+2. **Commit**: save a snapshot of your changes on your computer, with a short message
+3. **Push** your commits to GitHub
+4. **Check** your changes are on github.com
+
+. . .
+
+::: {.callout-tip}
+Commit little and often, and push at least at the **end of every day**.
+:::
+
+## The workflow at a glance
+
+```{mermaid}
+%%| fig-width: 10
+flowchart LR
+  A[Pull] --> B[Edit files]
+  B --> C[Commit]
+  C --> D[Push]
+  D --> E[(GitHub)]
+  E --> A
+```
+
+# Getting started {background-color="black"}
+
+## Setup
+
+1. Create a free account at [github.com](https://github.com)
+2. Install [GitHub Desktop](https://desktop.github.com) (Git comes included)
+3. Open GitHub Desktop and **sign in** with your GitHub account
+4. Check your name and email under **File ➜ Options ➜ Git**
+   (Mac: **GitHub Desktop ➜ Settings ➜ Git**)
+
+## Create a repository
+
+- On [github.com](https://github.com), click **New** ➜ give it a name
+- Tick **Add a README file**
+- Click **Create repository**
+
+## Copy it to your computer (clone)
+
+- In GitHub Desktop: **File ➜ Clone repository**
+- Pick your repository from the list
+- Choose where to save it (**Local path**)
+- Click **Clone**
+
+## Save your changes (commit)
+
+- Edit and save your files as usual
+- The **Changes** tab shows what has changed
+- Tick the files you want to include
+- Write a short message in the **Summary** box
+- Click **Commit to main**
+
+. . .
+
+::: {.callout-tip}
+Commit little and often, with messages that explain **why**.
+:::
+
+## Send your changes to GitHub (push)
+
+- Click **Push origin** at the top of the window
+- Your commits are now on github.com
+- The **History** tab shows all your past commits
+
+## Get changes from GitHub (pull)
+
+- Click **Fetch origin** to check for new changes
+- If there are any, the button changes to **Pull origin** ➜ click it
+- Always pull before you start working
+- Especially when collaborating or using multiple computers
+
+## Ignoring files
+
+Some files should **not** be tracked: large data, outputs, passwords 🔒
+
+- In the **Changes** tab, right-click a file
+- Choose **Ignore file** (or **Ignore all .xxx files**)
+- GitHub Desktop adds it to a `.gitignore` file for you
+
+# Collaborating {background-color="black"}
+
+## Branches
+
+```{mermaid}
+%%| fig-width: 10
+gitGraph
+  commit
+  commit
+  branch new-feature
+  checkout new-feature
+  commit
+  commit
+  checkout main
+  merge new-feature
+  commit
+```
+
+- Click **Current branch ➜ New branch**, give it a name
+- Click **Publish branch** to send it to GitHub
+
+## Pull requests
+
+1. Commit and push your work on your branch
+2. Click **Create Pull Request** (opens github.com)
+3. Others review and comment
+4. **Merge** into `main` ✅
+
+# Hands-on {background-color="black"}
+
+## Exercise
+
+1. Create a new repository on github.com
+2. Clone it with GitHub Desktop
+3. Edit the `README.md` file
+4. Commit and push your changes
+5. Check your changes appear on github.com 🎉
+
+## Resources
+
+- [GitHub Desktop documentation](https://docs.github.com/en/desktop)
+- [GitHub Docs](https://docs.github.com)
+
+## Questions? {.center background-color="black"}
+
+![](images/logo.png){fig-align="center" width="120" style="filter: invert(1);"}
