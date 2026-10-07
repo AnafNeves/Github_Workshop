@@ -17,7 +17,7 @@ format:
     slide-number: "c/t"
     highlight-style: "github-dark"
     code-line-numbers: false
-    fontsize: "250%"
+    fontsize: "170%"
     mermaid-format: svg
     # theme: blood
     # title-slide-attributes:
@@ -40,9 +40,9 @@ editor_options:
 ::: {.nonincremental}
 1. **Why** use Git and GitHub?
 2. **Key ideas**: the words you'll hear
-3. **GitHub Desktop**: the everyday workflow
-4. **Collaborating** with others
-5. **Hands-on**: your first repository
+3. **Getting set up** with GitHub Desktop
+4. **The workflow**: fork, commit, push, pull request
+5. **Hands-on**: add a memory to the REBEL website
 :::
 
 . . .
@@ -120,33 +120,17 @@ No prior experience needed. Ask questions at any time!
 
 ## Vocabulary {.smaller}
 
-| Term | What it means | In GitHub Desktop |
-|------|---------------|-------------------|
-| **Repository** (repo) | A project folder tracked by Git | *Current repository* |
-| **Commit** | A saved snapshot of your files | *Commit to main* |
-| **Push** | Send your commits to GitHub | *Push origin* |
-| **Pull** | Get new commits from GitHub | *Pull origin* |
-| **Clone** | Copy a repo from GitHub to your computer | *File ➜ Clone repository* |
-| **Branch** | A parallel copy to try things safely | *Current branch* |
+| Term | What it means | Where |
+|------|---------------|-------|
+| **Repository** (repo) | A project folder tracked by Git | Both |
+| **Fork** | Your own copy of someone else's repo | github.com |
+| **Clone** | Copy a repo from GitHub to your computer | GitHub Desktop |
+| **Commit** | A saved snapshot of your files | GitHub Desktop |
+| **Push** | Send your commits to GitHub | GitHub Desktop |
+| **Pull** | Get new commits from GitHub | GitHub Desktop |
+| **Pull request** (PR) | Ask the owner to add your changes | github.com |
 
-## The everyday cycle
-
-```{mermaid}
-%%| fig-width: 10
-flowchart LR
-  A[Pull] --> B[Edit]
-  B --> C[Commit]
-  C --> D[Push]
-  D --> E[(GitHub)]
-  E --> A
-```
-. . .
-
-::: {.callout-tip}
-Commit little and often. Push at least at the **end of every day**.
-:::
-
-# GitHub Desktop {background-color="#191970"}
+# Getting set up {background-color="#191970"}
 
 ## Setup
 
@@ -175,36 +159,51 @@ Commit little and often. Push at least at the **end of every day**.
 
     ![](images/repo_history.png){width="50%"}
 
-## 1. Create a repository
+# The workflow {background-color="#191970"}
 
-On [github.com](https://github.com):
+## The big picture
 
-- Click **New**
+```{mermaid}
+%%| fig-width: 10
+flowchart LR
+  A[(Original repo)] -- ① Fork --> B[(Your fork)]
+  B -- ② Clone --> C[Your computer]
+  C -- ③ Commit &amp; ④ Push --> B
+  B -- ⑤ Pull request --> A
+```
 
-    ![](images/new_repo.png){width="50%"}
-    
-- Give it a name
-- Tick **Add a README file**
-- Click **Create repository**
+. . .
 
-    ![](images/new_repo_name.png){width="50%"}
+::: {.callout-tip}
+Commit little and often. Push at least at the **end of every day**.
+:::
 
-## 2. Clone it to your computer
+## 1. Fork the repo
 
-- Most likely you will have to clone existing repos from the [Realitybending](https://github.com/RealityBending){.smaller}
+A **fork** is a copy of a repository under **your** account. Use it when you **can't** edit the original.
+
+1. On github.com, open the original repo and click **Fork** (top right)
+
+    ![](images/fork_ty.png){width="50%"}
+
+2. Keep the name and click **Create fork**
+
+    ![](images/create_fork.png){width="50%"}
+
+You now have your own copy: whatever you do there, the original stays untouched 🛡️
+
+## 2. Clone your fork
 
 In GitHub Desktop:
 
 - **File or Add ➜ Clone repository**
 
     ![](images/clone_repo.png){width="50%"}
-    
-- Pick your repository (I prefer to use the URL option)
-- Choose a **Local path**
-- Click **Clone**
 
-    ![](images/repo_url.png){width="50%"}
-  
+- Choose the **URL** tab and paste **your fork's** URL (it has *your* username)
+- Choose a **Local path** and click **Clone**
+
+    ![](images/clone_fork.png){width="50%"}
 
 ## 3. Commit your changes 
 
@@ -247,23 +246,39 @@ In GitHub Desktop:
 
 > Future you will thank you!
 
-## 4. Push to GitHub 
+## 4. Push to your fork
 
-- Refresh github.com: your changes are there 🎉
+- Click **Push origin**
+- Refresh **your fork** on github.com: your changes are there 🎉
 
     ![](images/github_changes.png){width="50%"}
 
-## 5. Pull changes 
+## 5. Open a pull request
 
-- Check whether changes have been made that you `do not have` on your computer
+A **pull request** (PR) asks the owner of the original repo to add your changes.
+
+1. On github.com, go to **your fork** ➜ **Pull requests** ➜ **New pull request**
+
+    ![](images/pr_fork.png){width="50%"}
+
+2. Check the arrow: **base** = the original ⬅ **head** = your fork, then click **Create pull request**
+
+    ![](images/pr_repo.png){width="50%"}
+
+3. The owner reviews, comments 💬 and **merges** ✅
+
+## 6. Keep your fork up to date
+
+The original repo keeps changing. Before you start working:
+
+- On github.com, open **your fork** and click **Sync fork ➜ Update branch**
+- In GitHub Desktop, click **Fetch origin**
 
     ![](images/fetch_push.png){width="50%"}
-    
+
 - If there's anything new, click **Pull origin**
 
     ![](images/pull_changes.png){width="50%"}
-    
-- **Always pull before you start working!**
 
 ## Files you shouldn't share
 
@@ -273,7 +288,48 @@ Large data, outputs, passwords...
 - Choose **Ignore file** (or **Ignore all .xxx files**)
 - GitHub Desktop writes a `.gitignore` file for you
 
-# Collaborating {background-color="#191970"}
+# Hands-on {background-color="#191970"}
+
+## Your turn: add a memory to the REBEL website
+
+::: {.nonincremental}
+1. **Fork** the [REBEL website repo](https://github.com/RealityBending/RealityBending.github.io)
+2. **Clone** your fork with GitHub Desktop
+3. Open the image folder under the memories folder
+4. Add an image from the dinner/pub from last Monday (follow the same naming specification)
+5. Open the `memories_manifest.json` file and add the information about the image
+
+    ![](images/memories_exercise.png){width="50%"}
+
+6. **Commit** with a good message and **push** to your fork
+7. Open a **pull request** to `RealityBending/RealityBending.github.io` 🎉
+:::
+
+# Extras {background-color="#191970"}
+
+## Create your own repository
+
+On [github.com](https://github.com):
+
+- Click **New**
+
+    ![](images/new_repo.png){width="50%"}
+    
+- Give it a name
+- Tick **Add a README file**
+- Click **Create repository**
+
+    ![](images/new_repo_name.png){width="50%"}
+
+- Then clone it, commit and push as usual: no fork needed, it's yours!
+
+## Branch or fork? {.smaller}
+
+| | Branch | Fork |
+|---|---|---|
+| **Where** | Inside the **same** repo | A **separate** copy on your account |
+| **Who** | People with access to the repo | Anyone |
+| **When** | Trying something in your own or your team's project | Contributing to someone else's project |
 
 ## Branches: try things safely
 
@@ -294,54 +350,7 @@ gitGraph
 - **Current branch ➜ New branch**, then **Publish branch**
 - `main` stays safe while you experiment
 
-## Pull requests: "please add my changes"
-
-1. Commit and push on your branch
-2. Click **Create Pull Request** (opens github.com)
-3. Others review and comment 
-4. **Merge** into `main` 
-
-## When things go wrong {.smaller}
-
-| Problem | What to do |
-|---------|-----------|
-| Push is rejected | Someone else pushed first: **Pull**, then **Push** again |
-| Conflict (same lines changed by two people) | GitHub Desktop shows the files: pick which version to keep, then commit |
-| Committed the wrong thing | **History** ➜ right-click the commit ➜ **Revert changes in commit** |
-| File too big | Don't commit it: **Ignore** it instead |
-
-# Hands-on {background-color="#191970"}
-
-## Your turn!
-
-::: {.nonincremental}
-1. Create a repository on github.com
-2. Clone it with GitHub Desktop
-3. Open `README.md` and write something about yourself
-4. Commit with a good message
-5. Push ⬆
-6. Check it on github.com 
-:::
-
-. . .
-
-**Bonus:** make a second change, commit, push, and look at the **History** tab.
-
-## Your actual real turn!
-::: {.nonincremental}
-1. Clone the repo for the [Rebel Website](https://github.com/RealityBending/RealityBending.github.io)
-2. Open the image folder under the memories folder
-3. Add an image from the dinner/pub from last Monday (follow the same naming specification)
-4. Open the memories_manifest.json file 
-
-    ![](images/memories_exercise.png){width="50%"}
-5. Add the information about the image
-6. Push
-7. Check it on github.com 
-:::
-
-
-## Going back in time ⏪ {.smaller}
+## Going back in time {.smaller}
 
 | What happened | What to do in GitHub Desktop |
 |---|---|
@@ -356,6 +365,15 @@ gitGraph
 Git never forgets: reverting adds a new snapshot that cancels the old one.
 :::
 
+## When things go wrong {.smaller}
+
+| Problem | What to do |
+|---------|-----------|
+| Push is rejected | Someone else pushed first: **Pull**, then **Push** again |
+| Conflict (same lines changed by two people) | GitHub Desktop shows the files: pick which version to keep, then commit |
+| Committed the wrong thing | **History** ➜ right-click the commit ➜ **Revert changes in commit** |
+| File too big | Don't commit it: **Ignore** it instead |
+
 ## Resources
 
 - [GitHub Desktop documentation](https://docs.github.com/en/desktop)
@@ -365,3 +383,4 @@ Git never forgets: reverting adds a new snapshot that cancels the old one.
 ## Questions? {.center background-color="#191970"}
 
 ![](images/logo.jpeg){fig-align="center" width="120" style="filter: invert(1);"}
+
