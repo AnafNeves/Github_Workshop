@@ -26,7 +26,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Introduction {background-color="black"}
+# Introduction {background-color="#191970"}
 
 ## Things to know
 
@@ -41,19 +41,20 @@ editor_options:
 ::: {.column width="50%"}
 **Git**
 
-- A software 
+- [A software]{style="color: red;"}
 - It is installed locally 
 - Runs on your computer
-- Tracks every change to your files (**version control**)
+- Tracks every change to your files (*version control*)
 
 :::
 
 ::: {.column width="50%"}
 **GitHub**
 
-- A service
-- It is hosted on the web and backup in the cloud
+- [A service]{style="color: red;"}
 - A *website* that hosts Git repositories
+- It is hosted on the web
+- It is cloud-base
 - Collaboration, sharing, websites
 :::
 
@@ -75,7 +76,7 @@ editor_options:
 
 ## Why bother?
 
-- No more `analysis_final_v2_REALLY_final.R`
+- No more `analysis_final_v2_REALLY_final.R` 
 - Go back to any previous version
 - Work with others without overwriting each other
 - Share your code & data (open science!)
@@ -131,6 +132,23 @@ flowchart LR
 3. Open GitHub Desktop and **sign in** with your GitHub account
 4. Check your name and email under **File ➜ Options ➜ Git**
    (Mac: **GitHub Desktop ➜ Settings ➜ Git**)
+
+## A tour of GitHub Desktop
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- **Top bar**: current repository, current branch, Push / Pull button
+- **Changes** tab: what you've edited since your last commit
+- **History** tab: all past commits
+- **Bottom left**: write a message and commit
+:::
+
+::: {.column width="60%"}
+![](images/desktop-overview.png)
+:::
+
+::::
 
 ## Create a repository
 
