@@ -341,6 +341,21 @@ gitGraph
 :::
 
 
+## Going back in time ⏪ {.smaller}
+
+| What happened | What to do in GitHub Desktop |
+|---|---|
+| Changed a file, **not committed** | **Changes** ➜ right-click file ➜ **Discard changes** |
+| Committed, **not pushed** | **History** ➜ right-click commit ➜ **Undo commit** |
+| Already **pushed** | **History** ➜ right-click commit ➜ **Revert changes in commit** ➜ **Push** |
+| Just want to **look** at an old version | github.com ➜ open the file ➜ **History** |
+
+. . .
+
+::: {.callout-tip}
+Git never forgets: reverting adds a new snapshot that cancels the old one.
+:::
+
 ## Resources
 
 - [GitHub Desktop documentation](https://docs.github.com/en/desktop)
