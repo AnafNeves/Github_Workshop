@@ -26,36 +26,83 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Introduction {background-color="#191970"}
+<!--
+  Colours used throughout:
+    Git    = #F05032 (orange, from the Git logo)
+    GitHub = #191970 (midnight blue)
 
-## Things to know
+  Screenshots sit inside the bullet they belong to, so they appear on the
+  same click. Each one covers the previous one in the same spot on the right.
+-->
 
-- No prior experience needed
-- Ask questions at any time!
-- Slides are made with [Quarto](https://quarto.org) and hosted on GitHub
+## Today
+
+::: {.nonincremental}
+1. **Why** use Git and GitHub?
+2. **Key ideas**: the words you'll hear
+3. **GitHub Desktop**: the everyday workflow
+4. **Collaborating** with others
+5. **Hands-on**: your first repository
+:::
+
+. . .
+
+No prior experience needed. Ask questions at any time!
+
+# Why bother? {background-color="#191970"}
+
+## Sound familiar?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Without Git**
+
+- `analysis.R`
+- `analysis_v2.R`
+- `analysis_v2_final.R`
+- `analysis_v2_final_REALLY.R`
+- `analysis_USE_THIS_ONE.R` 
+:::
+
+::: {.column width="50%"}
+**With Git**
+
+- One file: `analysis.R`
+- Every version saved, with a note on **what** changed and **why**
+- Go back to any point in time
+:::
+
+::::
+
+## What you get
+
+- **A backup** of your work in the cloud
+- **A time machine**: undo mistakes, see old versions
+- **Teamwork** without overwriting each other
+- **Open science**: share code and data with one link
+- **Free websites** with GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
+
+# Key ideas {background-color="#191970"}
 
 ## Git vs GitHub
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-**Git**
+[**Git**]{style="color: #F05032;"}
 
-- [A software]{style="color: red;"}
-- It is installed locally 
-- Runs on your computer
+- A **program**
+- Installed on **your computer**
 - Tracks every change to your files (*version control*)
-
 :::
 
 ::: {.column width="50%"}
-**GitHub**
+[**GitHub**]{style="color: #191970;"}
 
-- [A service]{style="color: red;"}
-- A *website* that hosts Git repositories
-- It is hosted on the web
-- It is cloud-base
-- Collaboration, sharing, websites
+- A **website**
+- Stores your projects **online** (in the cloud)
+- For sharing and collaborating
 :::
 
 ::::
@@ -64,183 +111,242 @@ editor_options:
 
 | | The engine | The friendly interface |
 |---|---|---|
-| **Analysing data** | **R** | **RStudio** |
-| **Version control** | **Git** | **GitHub Desktop** |
+| **Analysing data** | R | RStudio |
+| **Version control** | [Git]{style="color: #F05032;"} | [GitHub Desktop]{style="color: #191970;"} |
 
-: {.nonincremental}
-
-- **R** and **Git** do the actual work, and can be used on their own by typing commands
-- **RStudio** and **GitHub Desktop** are apps that make them easier to use, with buttons instead of commands
-- GitHub Desktop comes with Git built in, so you only install one thing
-- **GitHub** (the website) is where your projects are stored online and shared
-
-## Why bother?
-
-- No more `analysis_final_v2_REALLY_final.R` 
-- Go back to any previous version
-- Work with others without overwriting each other
-- Share your code & data (open science!)
-- Free websites with GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
-
-# Key concepts {background-color="black"}
+- The **engine** does the work; the **interface** gives you buttons instead of commands
+- GitHub Desktop comes with Git built in, so you only install **one** thing
+- [GitHub]{style="color: #191970;"} (the website) is where your projects live online
 
 ## Vocabulary {.smaller}
 
-| Term | Meaning |
-|------|---------|
-| **Repository** (repo) | A project folder tracked by Git |
-| **Commit** | A snapshot of your files at a point in time |
-| **Clone** | Copy a repo from GitHub to your computer |
-| **Push** / **Pull** | Send / receive changes to / from GitHub |
-| **Branch** | A parallel line of work |
-| **Pull request** (PR) | A request to merge changes into another branch |
+| Term | What it means | In GitHub Desktop |
+|------|---------------|-------------------|
+| **Repository** (repo) | A project folder tracked by Git | *Current repository* |
+| **Commit** | A saved snapshot of your files | *Commit to main* |
+| **Push** | Send your commits to GitHub | *Push origin* |
+| **Pull** | Get new commits from GitHub | *Pull origin* |
+| **Clone** | Copy a repo from GitHub to your computer | *File ➜ Clone repository* |
+| **Branch** | A parallel copy to try things safely | *Current branch* |
 
-: {.nonincremental}
-
-## The basic workflow
-
-0. **Pull** any changes from GitHub first, in case someone else made them
-1. **Edit** your files as usual: code, data, text...
-2. **Commit**: save a snapshot of your changes on your computer, with a short message
-3. **Push** your commits to GitHub
-4. **Check** your changes are on github.com
-
-. . .
-
-::: {.callout-tip}
-Commit little and often, and push at least at the **end of every day**.
-:::
-
-## The workflow at a glance
+## The everyday cycle
 
 ```{mermaid}
 %%| fig-width: 10
 flowchart LR
-  A[Pull] --> B[Edit files]
+  A[Pull] --> B[Edit]
   B --> C[Commit]
   C --> D[Push]
   D --> E[(GitHub)]
   E --> A
 ```
+. . .
 
-# Getting started {background-color="black"}
+::: {.callout-tip}
+Commit little and often. Push at least at the **end of every day**.
+:::
+
+# GitHub Desktop {background-color="#191970"}
 
 ## Setup
 
+::: {.nonincremental}
 1. Create a free account at [github.com](https://github.com)
-2. Install [GitHub Desktop](https://desktop.github.com) (Git comes included)
-3. Open GitHub Desktop and **sign in** with your GitHub account
-4. Check your name and email under **File ➜ Options ➜ Git**
-   (Mac: **GitHub Desktop ➜ Settings ➜ Git**)
+2. Install [GitHub Desktop](https://desktop.github.com)
+3. Open it and **sign in** with your GitHub account
+4. Check your name and email:
+   - Windows: **File ➜ Options ➜ Git**
+   - Mac: **GitHub Desktop ➜ Settings ➜ Git**
+:::
 
-## A tour of GitHub Desktop
+## A quick tour
+
+- **Left side**: all the repos
+
+    ![](images/repos_folders.png)
+
+- **Top bar**: repository, branch, Push / Pull
+- **Changes**: what you've edited
+- **Bottom left**: write a message, commit
+
+    ![](images/GithubDesktop_repo.png)
+
+- **History**: all past commits
+
+    ![](images/repo_history.png)
+
+## 1. Create a repository
+
+On [github.com](https://github.com):
+
+- Click **New**
+
+    ![](images/new_repo.png)
+    
+- Give it a name
+- Tick **Add a README file**
+- Click **Create repository**
+
+    ![](images/new_repo_name.png)
+
+## 2. Clone it to your computer
+
+- Most likely you will have to clone existing repos from the [Realitybending](https://github.com/RealityBending){.smaller}
+
+In GitHub Desktop:
+
+- **File or Add ➜ Clone repository**
+
+    ![](images/clone_repo.png)
+    
+- Pick your repository (I prefer to use the URL option)
+- Choose a **Local path**
+- Click **Clone**
+
+    ![](images/repo_url.png)
+  
+
+## 3. Commit your changes 
+
+- Edit and save your files as usual
+- Check the **Changes** tab
+- Write a **Summary**
+- Click **Commit to main**
+
+    ![](images/edit_repo.png)
+    
+- The button now says **Push origin**
+
+    ![](images/commit_push.png)
+
+## Good vs bad commit messages {.smaller}
 
 :::: {.columns}
 
-::: {.column width="40%"}
-- **Top bar**: current repository, current branch, Push / Pull button
-- **Changes** tab: what you've edited since your last commit
-- **History** tab: all past commits
-- **Bottom left**: write a message and commit
+::: {.column width="50%"}
+❌ **Bad**
+
+- `update`
+- `stuff`
+- `asdfgh`
+- `final version`
 :::
 
-::: {.column width="60%"}
-![](images/desktop-overview.png)
+::: {.column width="50%"}
+✅ **Good**
+
+- `Add age to demographics table`
+- `Fix typo in methods section`
+- `Remove outliers above 3 SD`
+- `Update figure 2 colours`
 :::
 
 ::::
 
-## Create a repository
-
-- On [github.com](https://github.com), click **New** ➜ give it a name
-- Tick **Add a README file**
-- Click **Create repository**
-
-## Copy it to your computer (clone)
-
-- In GitHub Desktop: **File ➜ Clone repository**
-- Pick your repository from the list
-- Choose where to save it (**Local path**)
-- Click **Clone**
-
-## Save your changes (commit)
-
-- Edit and save your files as usual
-- The **Changes** tab shows what has changed
-- Tick the files you want to include
-- Write a short message in the **Summary** box
-- Click **Commit to main**
-
 . . .
 
-::: {.callout-tip}
-Commit little and often, with messages that explain **why**.
-:::
+> Future you will thank you!
 
-## Send your changes to GitHub (push)
+## 4. Push to GitHub 
 
-- Click **Push origin** at the top of the window
-- Your commits are now on github.com
-- The **History** tab shows all your past commits
+- Refresh github.com: your changes are there 🎉
 
-## Get changes from GitHub (pull)
+    ![](images/github_changes.png)
 
-- Click **Fetch origin** to check for new changes
-- If there are any, the button changes to **Pull origin** ➜ click it
-- Always pull before you start working
-- Especially when collaborating or using multiple computers
+## 5. Pull changes 
 
-## Ignoring files
+- Check whether changes have been made that you `do not have` on your computer
 
-Some files should **not** be tracked: large data, outputs, passwords 🔒
+    ![](images/fetch_push.png)
+    
+- If there's anything new, click **Pull origin**
 
-- In the **Changes** tab, right-click a file
+    ![](images/pull_changes.png)
+    
+- **Always pull before you start working!**
+
+## Files you shouldn't share
+
+Large data, outputs, passwords...
+
+- In the **Changes** tab, right-click the file
 - Choose **Ignore file** (or **Ignore all .xxx files**)
-- GitHub Desktop adds it to a `.gitignore` file for you
+- GitHub Desktop writes a `.gitignore` file for you
 
-# Collaborating {background-color="black"}
+# Collaborating {background-color="#191970"}
 
-## Branches
+## Branches: try things safely
 
 ```{mermaid}
 %%| fig-width: 10
 gitGraph
   commit
   commit
-  branch new-feature
-  checkout new-feature
+  branch new-idea
+  checkout new-idea
   commit
   commit
   checkout main
-  merge new-feature
+  merge new-idea
   commit
 ```
 
-- Click **Current branch ➜ New branch**, give it a name
-- Click **Publish branch** to send it to GitHub
+- **Current branch ➜ New branch**, then **Publish branch**
+- `main` stays safe while you experiment
 
-## Pull requests
+## Pull requests: "please add my changes"
 
-1. Commit and push your work on your branch
+1. Commit and push on your branch
 2. Click **Create Pull Request** (opens github.com)
-3. Others review and comment
-4. **Merge** into `main` ✅
+3. Others review and comment 
+4. **Merge** into `main` 
 
-# Hands-on {background-color="black"}
+## When things go wrong {.smaller}
 
-## Exercise
+| Problem | What to do |
+|---------|-----------|
+| Push is rejected | Someone else pushed first: **Pull**, then **Push** again |
+| Conflict (same lines changed by two people) | GitHub Desktop shows the files: pick which version to keep, then commit |
+| Committed the wrong thing | **History** ➜ right-click the commit ➜ **Revert changes in commit** |
+| File too big | Don't commit it: **Ignore** it instead |
 
-1. Create a new repository on github.com
+# Hands-on {background-color="#191970"}
+
+## Your turn!
+
+::: {.nonincremental}
+1. Create a repository on github.com
 2. Clone it with GitHub Desktop
-3. Edit the `README.md` file
-4. Commit and push your changes
-5. Check your changes appear on github.com 🎉
+3. Open `README.md` and write something about yourself
+4. Commit with a good message
+5. Push ⬆
+6. Check it on github.com 
+:::
+
+. . .
+
+**Bonus:** make a second change, commit, push, and look at the **History** tab.
+
+## Your actual real turn!
+::: {.nonincremental}
+1. Clone the repo for the [Rebel Website](https://github.com/RealityBending/RealityBending.github.io)
+2. Open the image folder under the memories folder
+3. Add an image from the dinner/pub from last Monday (follow the same naming specification)
+4. Open the memories_manifest.json file 
+
+    ![](images/memories_exercise.png)
+5. Add the information about the image
+6. Push
+7. Check it on github.com 
+:::
+
 
 ## Resources
 
 - [GitHub Desktop documentation](https://docs.github.com/en/desktop)
 - [GitHub Docs](https://docs.github.com)
+- [GitHub Skills](https://skills.github.com): free interactive courses
 
-## Questions? {.center background-color="black"}
+## Questions? {.center background-color="#191970"}
 
-![](images/logo.png){fig-align="center" width="120" style="filter: invert(1);"}
+![](images/logo.jpeg){fig-align="center" width="120" style="filter: invert(1);"}
