@@ -163,17 +163,17 @@ Commit little and often. Push at least at the **end of every day**.
 
 - **Left side**: all the repos
 
-    ![](images/repos_folders.png)
+    ![](images/repos_folders.png){width="50%"}
 
 - **Top bar**: repository, branch, Push / Pull
 - **Changes**: what you've edited
 - **Bottom left**: write a message, commit
 
-    ![](images/GithubDesktop_repo.png)
+    ![](images/GithubDesktop_repo.png){width="50%"}
 
 - **History**: all past commits
 
-    ![](images/repo_history.png)
+    ![](images/repo_history.png){width="50%"}
 
 ## 1. Create a repository
 
@@ -181,13 +181,13 @@ On [github.com](https://github.com):
 
 - Click **New**
 
-    ![](images/new_repo.png)
+    ![](images/new_repo.png){width="50%"}
     
 - Give it a name
 - Tick **Add a README file**
 - Click **Create repository**
 
-    ![](images/new_repo_name.png)
+    ![](images/new_repo_name.png){width="50%"}
 
 ## 2. Clone it to your computer
 
@@ -197,13 +197,13 @@ In GitHub Desktop:
 
 - **File or Add ➜ Clone repository**
 
-    ![](images/clone_repo.png)
+    ![](images/clone_repo.png){width="50%"}
     
 - Pick your repository (I prefer to use the URL option)
 - Choose a **Local path**
 - Click **Clone**
 
-    ![](images/repo_url.png)
+    ![](images/repo_url.png){width="50%"}
   
 
 ## 3. Commit your changes 
@@ -213,11 +213,11 @@ In GitHub Desktop:
 - Write a **Summary**
 - Click **Commit to main**
 
-    ![](images/edit_repo.png)
+    ![](images/edit_repo.png){width="50%"}
     
 - The button now says **Push origin**
 
-    ![](images/commit_push.png)
+    ![](images/commit_push.png){width="50%"}
 
 ## Good vs bad commit messages {.smaller}
 
@@ -251,17 +251,17 @@ In GitHub Desktop:
 
 - Refresh github.com: your changes are there 🎉
 
-    ![](images/github_changes.png)
+    ![](images/github_changes.png){width="50%"}
 
 ## 5. Pull changes 
 
 - Check whether changes have been made that you `do not have` on your computer
 
-    ![](images/fetch_push.png)
+    ![](images/fetch_push.png){width="50%"}
     
 - If there's anything new, click **Pull origin**
 
-    ![](images/pull_changes.png)
+    ![](images/pull_changes.png){width="50%"}
     
 - **Always pull before you start working!**
 
@@ -334,7 +334,7 @@ gitGraph
 3. Add an image from the dinner/pub from last Monday (follow the same naming specification)
 4. Open the memories_manifest.json file 
 
-    ![](images/memories_exercise.png)
+    ![](images/memories_exercise.png){width="50%"}
 5. Add the information about the image
 6. Push
 7. Check it on github.com 
