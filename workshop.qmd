@@ -154,9 +154,9 @@ No prior experience needed. Ask questions at any time!
 
 [2. **Top bar**: repository, branch, Push / Pull]{.fragment fragment-index=3}
 
-[3. **Changes**: what you've edited]{.fragment fragment-index=4}
+[3. **Changes**: what you've edited]{.fragment fragment-index=5}
 
-[4. **Bottom left**: write a message, commit]{.fragment fragment-index=5}
+[4. **Bottom left**: write a message, commit]{.fragment fragment-index=6}
 
 [5. **History**: all past commits]{.fragment fragment-index=7}
 :::
@@ -166,7 +166,7 @@ No prior experience needed. Ask questions at any time!
 ::: {.r-stack}
 ![](images/repos_folders.png){.fragment fragment-index=2}
 
-![](images/GithubDesktop_repo.png){.fragment fragment-index=6}
+![](images/GithubDesktop_repo.png){.fragment fragment-index=4}
 
 ![](images/repo_history.png){.fragment fragment-index=8}
 :::
@@ -210,6 +210,7 @@ A **fork** is a copy of a repository under **your** account. Use it when you **c
 ::: {.column width="70%"}
 ::: {.r-stack}
 ![](images/fork_ty.png){.fragment fragment-index=2}
+
 ![](images/create_fork.png){.fragment fragment-index=4}
 :::
 :::
@@ -222,27 +223,55 @@ A **fork** is a copy of a repository under **your** account. Use it when you **c
 
 In GitHub Desktop:
 
-- **File or Add ➜ Clone repository**
+:::: {.columns}
 
-    ![](images/clone_repo.png){width="50%"}
+::: {.column width="40%"}
+::: {.nonincremental}
+[1. **File ➜ Clone repository**]{.fragment fragment-index=1}
 
-- Choose the **URL** tab and paste **your fork's** URL (it has *your* username)
-- Choose a **Local path** and click **Clone**
+[2. Choose the **URL** tab and paste **your fork's** URL (it has *your* username)]{.fragment fragment-index=3}
 
-    ![](images/clone_fork.png){width="50%"}
+[3. Choose a **Local path** and click **Clone**]{.fragment fragment-index=5}
+:::
+:::
 
-## 3. Commit your changes 
+::: {.column width="60%"}
+::: {.r-stack}
+![](images/clone_repo.png){.fragment fragment-index=2}
 
-- Edit and save your files as usual
-- Check the **Changes** tab
-- Write a **Summary**
-- Click **Commit to main**
+![](images/clone_fork.png){.fragment fragment-index=4}
+:::
+:::
 
-    ![](images/edit_repo.png){width="50%"}
-    
-- The button now says **Push origin**
+::::
 
-    ![](images/commit_push.png){width="50%"}
+## 3. Commit your changes
+
+:::: {.columns}
+
+::: {.column width="30%"}
+::: {.nonincremental}
+[1. Edit and save your files as usual]{.fragment fragment-index=1}
+
+[2. Check the **Changes** tab]{.fragment fragment-index=3}
+
+[3. Write a **Summary**]{.fragment fragment-index=4}
+
+[4. Click **Commit to main**]{.fragment fragment-index=5}
+
+[5. The button now says **Push origin**]{.fragment fragment-index=6}
+:::
+:::
+
+::: {.column width="70%"}
+::: {.r-stack}
+![](images/edit_repo.png){.fragment fragment-index=2}
+
+![](images/commit_push.png){.fragment fragment-index=7}
+:::
+:::
+
+::::
 
 ## Good vs bad commit messages {.smaller}
 
@@ -274,37 +303,82 @@ In GitHub Desktop:
 
 ## 4. Push to your fork
 
-- Click **Push origin**
-- Refresh **your fork** on github.com: your changes are there 🎉
+:::: {.columns}
 
-    ![](images/github_changes.png){width="50%"}
+::: {.column width="30%"}
+::: {.nonincremental}
+[1. Click **Push origin**]{.fragment fragment-index=1}
+
+[2. Refresh **your fork** on github.com: your changes are there 🎉]{.fragment fragment-index=2}
+:::
+:::
+
+::: {.column width="70%"}
+::: {.r-stack}
+![](images/github_changes.png){.fragment fragment-index=3}
+:::
+:::
+
+::::
 
 ## 5. Open a pull request
 
 A **pull request** (PR) asks the owner of the original repo to add your changes.
 
-1. On github.com, go to **your fork** ➜ **Pull requests** ➜ **New pull request**
+:::: {.columns}
 
-    ![](images/pr_fork.png){width="50%"}
+::: {.column width="40%"}
+::: {.nonincremental}
+[1. On github.com, go to **your fork** ➜ **Pull requests** ➜ **New pull request**]{.fragment fragment-index=1}
 
-2. Check the arrow: **base** = the original ⬅ **head** = your fork, then click **Create pull request**
+[2. Check the arrow: **base** = the original ⬅ **head** = your fork, then click **Create pull request**]{.fragment fragment-index=3}
 
-    ![](images/pr_repo.png){width="50%"}
+[3. The owner reviews, comments 💬 and **merges** ✅]{.fragment fragment-index=5}
+:::
+:::
 
-3. The owner reviews, comments 💬 and **merges** ✅
+::: {.column width="60%"}
+::: {.r-stack}
+![](images/pr_fork.png){.fragment fragment-index=2}
+
+![](images/pr_repo.png){.fragment fragment-index=4}
+:::
+:::
+
+::::
 
 ## 6. Keep your fork up to date
 
 The original repo keeps changing. Before you start working:
 
-- On github.com, open **your fork** and click **Sync fork ➜ Update branch**
-- In GitHub Desktop, click **Fetch origin**
+:::: {.columns}
 
-    ![](images/fetch_push.png){width="50%"}
+::: {.column width="40%"}
+::: {.nonincremental}
+[1. On github.com, open **your fork** and click **Sync fork ➜ Update branch**]{.fragment fragment-index=1}
 
-- If there's anything new, click **Pull origin**
+[2. In GitHub Desktop, click **Fetch origin**]{.fragment fragment-index=3}
 
-    ![](images/pull_changes.png){width="50%"}
+[3. If there's anything new, click **Pull origin**]{.fragment fragment-index=5}
+:::
+:::
+
+::: {.column width="60%"}
+::: {.r-stack}
+![](images/sync_fork.png){.fragment fragment-index=2}
+
+![](images/fetch_push.png){.fragment fragment-index=4}
+
+![](images/pull_changes.png){.fragment fragment-index=6}
+:::
+:::
+
+::::
+
+::: {.fragment fragment-index=7}
+> In GitHub Desktop, **origin** means **your fork**, not the original repo. So **Pull origin** only downloads what's already on your fork. If your fork is behind the original, there's nothing new on it to pull. **Sync fork** brings your fork up to date with the original first. Then **Pull origin** brings those changes down to your computer.
+:::
+
 
 ## Files you shouldn't share
 
@@ -318,18 +392,31 @@ Large data, outputs, passwords...
 
 ## Your turn: add a memory to the REBEL website
 
+:::: {.columns}
+
+::: {.column width="40%"}
 ::: {.nonincremental}
-1. **Fork** the [REBEL website repo](https://github.com/RealityBending/RealityBending.github.io)
-2. **Clone** your fork with GitHub Desktop
-3. Open the image folder under the memories folder
-4. Add an image from the dinner/pub from last Monday (follow the same naming specification)
-5. Open the `memories_manifest.json` file and add the information about the image
+[1. **Fork** the [REBEL website repo](https://github.com/RealityBending/RealityBending.github.io)]{.fragment fragment-index=1}
 
-    ![](images/memories_exercise.png){width="50%"}
+[2. **Clone** your fork with GitHub Desktop]{.fragment fragment-index=2}
 
-6. **Commit** with a good message and **push** to your fork
-7. Open a **pull request** to `RealityBending/RealityBending.github.io` 🎉
+[3. Open the image folder under the memories folder]{.fragment fragment-index=3}
+
+[4. Add an image from the dinner/pub from last Monday (follow the same naming specification)]{.fragment fragment-index=4}
+
+[5. Open the `memories_manifest.json` file and add the information about the image]{.fragment fragment-index=5}
+
+[6. **Commit** with a good message and **push** to your fork]{.fragment fragment-index=7}
+
+[7. Open a **pull request** to `RealityBending/RealityBending.github.io` 🎉]{.fragment fragment-index=8}
 :::
+:::
+
+::: {.column width="60%"}
+![](images/memories_exercise.png){.fragment fragment-index=6}
+:::
+
+::::
 
 # Extras {background-color="#191970"}
 
@@ -337,15 +424,29 @@ Large data, outputs, passwords...
 
 On [github.com](https://github.com):
 
-- Click **New**
+:::: {.columns}
 
-    ![](images/new_repo.png){width="50%"}
-    
-- Give it a name
-- Tick **Add a README file**
-- Click **Create repository**
+::: {.column width="30%"}
+::: {.nonincremental}
+[1. Click **New**]{.fragment fragment-index=1}
 
-    ![](images/new_repo_name.png){width="50%"}
+[2. Give it a name]{.fragment fragment-index=3}
+
+[3. Tick **Add a README file**]{.fragment fragment-index=5}
+
+[4. Click **Create repository**]{.fragment fragment-index=6}
+:::
+:::
+
+::: {.column width="70%"}
+::: {.r-stack}
+![](images/new_repo.png){.fragment fragment-index=2}
+
+![](images/new_repo_name.png){.fragment fragment-index=4}
+:::
+:::
+
+::::
 
 - Then clone it, commit and push as usual: no fork needed, it's yours!
 
