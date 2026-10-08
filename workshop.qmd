@@ -38,6 +38,7 @@ editor_options:
 ## Today
 
 ::: {.nonincremental}
+
 1. **Why** use Git and GitHub?
 2. **Key ideas**: the words you'll hear
 3. **Getting set up** with GitHub Desktop
@@ -104,21 +105,21 @@ No prior experience needed. Ask questions at any time!
 - Stores your projects **online** (in the cloud)
 - For sharing and collaborating
 :::
-
 ::::
 
-## An analogy with R {.smaller}
+## An analogy with R
 
 | | The engine | The friendly interface |
 |---|---|---|
 | **Analysing data** | R | RStudio |
 | **Version control** | [Git]{style="color: #F05032;"} | [GitHub Desktop]{style="color: #191970;"} |
+<br><br>
 
 - The **engine** does the work; the **interface** gives you buttons instead of commands
 - GitHub Desktop comes with Git built in, so you only install **one** thing
 - [GitHub]{style="color: #191970;"} (the website) is where your projects live online
 
-## Vocabulary {.smaller}
+## Vocabulary
 
 | Term | What it means | Where |
 |------|---------------|-------|
@@ -145,19 +146,33 @@ No prior experience needed. Ask questions at any time!
 
 ## A quick tour
 
-- **Left side**: all the repos
+:::: {.columns}
 
-    ![](images/repos_folders.png){width="50%"}
+::: {.column width="30%"}
+::: {.nonincremental}
+[1. **Left side**: all the repos]{.fragment fragment-index=1}
 
-- **Top bar**: repository, branch, Push / Pull
-- **Changes**: what you've edited
-- **Bottom left**: write a message, commit
+[2. **Top bar**: repository, branch, Push / Pull]{.fragment fragment-index=3}
 
-    ![](images/GithubDesktop_repo.png){width="50%"}
+[3. **Changes**: what you've edited]{.fragment fragment-index=4}
 
-- **History**: all past commits
+[4. **Bottom left**: write a message, commit]{.fragment fragment-index=5}
 
-    ![](images/repo_history.png){width="50%"}
+[5. **History**: all past commits]{.fragment fragment-index=7}
+:::
+:::
+
+::: {.column width="70%"}
+::: {.r-stack}
+![](images/repos_folders.png){.fragment fragment-index=2}
+
+![](images/GithubDesktop_repo.png){.fragment fragment-index=6}
+
+![](images/repo_history.png){.fragment fragment-index=8}
+:::
+:::
+
+::::
 
 # The workflow {background-color="#191970"}
 
@@ -182,15 +197,26 @@ Commit little and often. Push at least at the **end of every day**.
 
 A **fork** is a copy of a repository under **your** account. Use it when you **can't** edit the original.
 
-1. On github.com, open the original repo and click **Fork** (top right)
+:::: {.columns}
 
-    ![](images/fork_ty.png){width="50%"}
+::: {.column width="30%"}
+::: {.nonincremental}
+[1. On github.com, open the original repo and click **Fork** (top right)]{.fragment fragment-index=1}
 
-2. Keep the name and click **Create fork**
+[2. Keep the name and click **Create fork**]{.fragment fragment-index=3}
+:::
+:::
 
-    ![](images/create_fork.png){width="50%"}
+::: {.column width="70%"}
+::: {.r-stack}
+![](images/fork_ty.png){.fragment fragment-index=2}
+![](images/create_fork.png){.fragment fragment-index=4}
+:::
+:::
 
-You now have your own copy: whatever you do there, the original stays untouched 🛡️
+::::
+
+- You now have your own copy: whatever you do there, the original stays untouched
 
 ## 2. Clone your fork
 
