@@ -14,16 +14,6 @@ A beginner-friendly introduction to Git and GitHub using **GitHub Desktop**, mad
 
 No prior experience needed.
 
-## Building the slides
-
-The slides are written in [Quarto](https://quarto.org) (`workshop.qmd`). To render them:
-
-```bash
-quarto render workshop.qmd
-```
-
-Commit `workshop.html` **and** the `workshop_files/` folder so the slides display correctly on GitHub Pages.
-
 ## Contact
 
 Ana Neves: a.neves@sussex.ac.uk
